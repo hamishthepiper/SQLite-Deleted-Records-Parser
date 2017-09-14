@@ -1,6 +1,6 @@
 #sqlparse.py
 #
-#This program parses an SQLite3 database for deleted entires and
+#This program parses an SQLite3 database for deleted entries and
 #places the output into either and TSV file, or text file
 #
 #The SQLite file format, offsets etc is described at
@@ -66,7 +66,7 @@ if len(sys.argv) == 1:
 #if input of output file missing, exit
 if (options.infile == None) or (options.outfile == None):
     parser.print_help()
-    print "Filename or Output file not given"
+    print("Filename or Output file not given")
     sys.exit(0)
 
 #open file, confirm it is an SQLite DB
@@ -79,7 +79,7 @@ except:
 try:
     output = open(options.outfile, 'w')
 except:
-    print "Error opening output file"
+    print("Error opening output file")
     sys.exit(0)
 
 
